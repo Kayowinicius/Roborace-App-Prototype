@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UNIVAS Roborace - Inscrição na Competição</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <div class="page-header">
+        <h2 class="logo-text">UNIVAS</h2>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>ROBORACE - INSCRIÇÃO NA COMPETIÇÃO</h1>
+            <p>Garanta sua vaga e receba todas as novidades do evento.</p>
+        </header>
+
+        <form class="form-card" action="/caminho-para-enviar" method="post">
+
+            <h2>Dados do Participante</h2>
+
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome_completo" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-mail para Contato</label>
+                <input type="email" id="email" name="email_contato" placeholder="seu.email@exemplo.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="instituicao">Instituição de Ensino</label>
+                <input type="text" id="instituicao" name="instituicao_ensino" placeholder="Nome da sua escola ou universidade" required>
+            </div>
+
+            <div class="input-group">
+                <label for="telefone">Telefone (Opcional)</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="novidades" name="receber_novidades" checked>
+                <label for="novidades">Desejo receber novidades e atualizações sobre o Roborace por e-mail.</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">FINALIZAR INSCRIÇÃO</button>
+            </div>
+
+        </form>
+    </div>
+
 </body>
 </html>
+
