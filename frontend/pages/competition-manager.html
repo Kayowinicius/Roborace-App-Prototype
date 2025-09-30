@@ -1,11 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #dcedc8;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #formulario {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        form {
+            width: 60%;
+            margin: 20px auto;
+            border: 1px solid #CCC;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #fef6e4;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border: 2px solid #0077CC;
+            background-color: #f0f8ff;
+        }
+
+        button {
+            background-color: #0077CC;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <h1 id="formulario">Formulário de dados pessoais</h1>
+
+    <form action="" method="">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" required />
+        <br>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required />
+        <br>
+
+        <fieldset>
+            <legend>Gênero</legend>
+            <input id="masc" name="genero" value="masc" type="radio" /> <label for="masc">Masculino</label><br>
+            <input id="femi" name="genero" value="femi" type="radio" /> <label for="femi">Feminino</label><br>
+            <input id="naoinf" name="genero" value="naoinf" type="radio" /> <label for="naoinf">Não quero opinar</label>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Escolaridade</legend>
+            <input name="escolaridade" value="fund" type="radio" id="fund"/> <label for="fund">Ensino fundamental</label><br>
+            <input name="escolaridade" value="med" type="radio" id="med" /> <label for="med">Ensino médio</label><br>
+            <input name="escolaridade" value="sup" type="radio" id="sup"/> <label for="sup">Superior</label>
+        </fieldset>
+        <br>
+
+        <label for="notas">Notas</label>
+        <select name="notas" id="notas">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem" rows="10" cols="30" placeholder="Digite sua mensagem aqui..."></textarea>
+        <br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
 </body>
 </html>
